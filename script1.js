@@ -1,3 +1,4 @@
+script
 // Sample image data
 const images = [
     {
@@ -137,7 +138,7 @@ function filterImages(category) {
 function adjustBrightness(value) {
     const galleryItems = document.querySelectorAll('.gallery-item img');
     galleryItems.forEach(img => {
-        img.style.filter = `brightness(${value}%)`;
+        img.style.filter = brightness(${value}%);
     });
 }
 
@@ -178,4 +179,4 @@ document.addEventListener('keydown', (e) => {
 });
 
 // Initial render
-renderGallery(); 
+renderGallery();
